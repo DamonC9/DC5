@@ -17,8 +17,21 @@
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   white-space: nowrap;
-  .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
-  .user-select(none);
+
+
+  &.preview-btn {width: 40%; background: @neon-green; padding: .7em; font-size: 1.3em; margin: .4em 0; color: black;
+ -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+
+    ul li a {font-size: inherit;}
+
+    span  {margin-right: 10px; position: relative; top: 2px;
+
+    }
+
+    &:active, &:hover {background: @neon-blue; color: black;}
+  }
 
   &:focus {
     .tab-focus();
@@ -26,7 +39,7 @@
 
   &:hover,
   &:focus {
-    color: @btn-default-color;
+    
     text-decoration: none;
   }
 

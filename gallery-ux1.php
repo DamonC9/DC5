@@ -27,12 +27,14 @@
 		<div class="col-lg-4 col-sm-4 col-xs-12">
 			<div class="overlay-content">
 				<h1>Title</h1>
+				<a href=""><div class="btn preview-btn"><span class="icon-eye"></span>Preview</div></a>
 				<p>Lorem ipsum dolor sit amet, conconsequuntur! olor sit amet, conconsequuntur! olor sit amet, conconsequuntur! olor sit amet, conconsequuntur! et, conconsequuntur! olor sit amet, conconsequuntur! o</p>
 			</div>
 		</div>
-		<div class="tags-box">
+		<div class="tags-box light">
 			<ul>
-				<li><div class="tag"><p>UX / UI<span class="icon-menu"></span></p></div></li>
+				<li><div class="tag"><p>3D<span class="icon-uniF4EA"></span></p></div></li>
+				<li><div class="tag"><p>User-Experience<span class="icon-insert-template"></span></p></div></li>
 				<li><div class="tag"><p>Development<span class="icon-code"></span></p></div></li>
 				<li><div class="tag"><p>Creative Concept<span class="icon-light-bulb"></span></p></div></li>
 				<li><div class="tag"><p>Motion Graphics<span class="icon-atom"></span></p></div></li>

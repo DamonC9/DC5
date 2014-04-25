@@ -854,15 +854,30 @@ table {
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.428571429;
-  border-radius: 4px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
+}
+.btn.preview-btn {
+  width: 40%;
+  background: #0eb566;
+  padding: .7em;
+  font-size: 1.3em;
+  margin: .4em 0;
+  color: black;
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  transition: all .3s linear;
+}
+.btn.preview-btn ul li a {
+  font-size: inherit;
+}
+.btn.preview-btn span {
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
+.btn.preview-btn:active,
+.btn.preview-btn:hover {
+  background: #0ba9d0;
+  color: black;
 }
 .btn:focus {
   outline: thin dotted #333;
@@ -871,7 +886,6 @@ table {
 }
 .btn:hover,
 .btn:focus {
-  color: #333333;
   text-decoration: none;
 }
 .btn:active,
@@ -1977,6 +1991,17 @@ img {
 .icon-menu:before {
   content: "\e602";
 }
+.icon-list:before {
+  content: "\e615";
+}
+.icon-list2:before {
+  content: "\e616";
+  font-size: 18px;
+}
+.icon-eye:before {
+  content: "\e617";
+  font-size: 20px;
+}
 .icon-close:before {
   content: "\e603";
   font-size: 16px;
@@ -1984,6 +2009,7 @@ img {
 }
 .icon-code:before {
   content: "\e604";
+  color: #94ff54;
 }
 .icon-facebook:before {
   content: "\e605";
@@ -2005,9 +2031,11 @@ img {
 }
 .icon-atom:before {
   content: "\e60b";
+  color: #b27ce0;
 }
 .icon-uniF4EA:before {
   content: "\e60c";
+  color: #fc6f6f;
 }
 .icon-contract:before {
   content: "\e611";
@@ -2017,6 +2045,7 @@ img {
 }
 .icon-insert-template:before {
   content: "\e613";
+  color: #54b9ff;
 }
 .icon-mail:before {
   content: "\e60d";
@@ -2025,9 +2054,11 @@ img {
 }
 .icon-brush:before {
   content: "\e60e";
+  color: #faef5c;
 }
 .icon-light-bulb:before {
   content: "\e60f";
+  color: #ffa963;
 }
 .icon-behance:before {
   content: "\e610";
@@ -2080,7 +2111,7 @@ img {
   color: #60e385;
   font-weight: 100;
   letter-spacing: .05em;
-  padding: 20px 15px;
+  padding: 60px 15px 0 15px;
 }
 .slidedown h3 {
   color: white;
@@ -2649,7 +2680,7 @@ But conflicting issues with modernizr versions
   padding: 1px;
   padding-top: 0;
   padding-left: 0;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 45px;
   cursor: pointer;
 }
@@ -2696,7 +2727,7 @@ But conflicting issues with modernizr versions
 }
 .sky-tabs > .switcher a {
   display: block;
-  margin: 0 -20px;
+  margin: 10px -20px 10px -20px;
   padding: 0 20px;
   text-decoration: none;
   color: inherit;
@@ -2726,6 +2757,9 @@ But conflicting issues with modernizr versions
   -ms-transition: opacity 0.8s, -ms-transform 0.8s;
   -moz-transition: opacity 0.8s, -moz-transform 0.8s;
   -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
+}
+.sky-tabs > ul > li > h1 {
+  padding: .5em 0;
 }
 .sky-tabs > .sky-tab-content-1:checked ~ ul > .sky-tab-content-1,
 .sky-tabs > .sky-tab-content-2:checked ~ ul > .sky-tab-content-2,
@@ -3237,6 +3271,13 @@ But conflicting issues with modernizr versions
   .sky-tabs > label span span {
     padding: 0 15px;
   }
+  .sky-tabs > label span span a span {
+    display: inline-block;
+    position: relative;
+    bottom: 2px;
+    padding-left: 10px;
+    font-size: 14px;
+  }
   .sky-tabs > label .fa {
     margin-right: 10px;
     margin-left: -5px;
@@ -3333,6 +3374,7 @@ But conflicting issues with modernizr versions
   top: 0;
   left: 0;
   z-index: 9999;
+  overflow-y: scroll;
 }
 /* Overlay Colors */
 .overlay-ux1 {
@@ -3342,7 +3384,7 @@ But conflicting issues with modernizr versions
 .overlay-ux1 .sky-tabs > input:checked + label span span,
 .overlay-ux1 .sky-tabs > input + label span span:hover,
 .overlay-ux1 .sky-tabs > label:hover span span {
-  background: #35a9a9;
+  background: #32a1a1;
 }
 /* Overlay closing cross */
 .overlay .overlay-close {
@@ -3359,6 +3401,9 @@ But conflicting issues with modernizr versions
   outline: none;
   z-index: 100;
 }
+.scroll-wrapper {
+  position: static;
+}
 /* Menu style */
 .overlay nav {
   text-align: center;
@@ -3372,9 +3417,10 @@ But conflicting issues with modernizr versions
   list-style: none;
   padding: 0;
   margin: 0 auto;
-  display: inline-block;
+  display: block;
   height: 100%;
   position: relative;
+  overflow-y: scroll;
 }
 .overlay ul li {
   display: block;
@@ -3385,7 +3431,7 @@ But conflicting issues with modernizr versions
   backface-visibility: hidden;
 }
 .overlay ul li a {
-  font-size: 54px;
+  font-size: inherit;
   font-weight: 300;
   display: block;
   color: #fff;
@@ -3433,6 +3479,12 @@ But conflicting issues with modernizr versions
   width: 185px;
   height: auto;
 }
+.tags-box.dark ul li .tag {
+  background: #32343a;
+}
+.tags-box.light ul li .tag {
+  background: #414349;
+}
 .tags-box ul {
   width: 100%;
 }
@@ -3440,13 +3492,13 @@ But conflicting issues with modernizr versions
   min-height: 0;
 }
 .tags-box ul li .tag {
-  background: #484848;
   padding: 0;
   margin: 0 0 10px 0;
 }
 .tags-box ul li .tag p {
   padding: 10px;
   color: white;
+  font-size: 13px;
 }
 .tags-box ul li .tag p span {
   float: right;
@@ -3459,6 +3511,20 @@ But conflicting issues with modernizr versions
   }
   .overlay ul li {
     min-height: 34px;
+  }
+}
+@media screen and (max-width: 64em) {
+  .tags-box {
+    position: relative;
+    width: 100%;
+    padding-top: 1em;
+    left: inherit;
+    top: inherit;
+  }
+  .tags-box ul li {
+    display: inline-block;
+    width: 185px;
+    padding-right: .5em;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -3509,6 +3575,9 @@ div.guide p.title {
   margin: 0 auto;
   width: 100%;
 }
+.html5gallery-title-text-0 {
+  background: rgba(40, 40, 40, 0.7);
+}
 @media screen and (min-width: 1280px) {
   .gallery-container {
     width: 96%;
@@ -3518,6 +3587,11 @@ div.guide p.title {
   .gallery-container {
     width: 92%;
   }
+}
+.html5gallery-tn-0 {
+  -moz-box-shadow: 0px 2px 5px #000;
+  /* -webkit-box-shadow: 0px 2px 5px #000; */
+  /* box-shadow: 0px 2px 5px #000; */
 }
 @media screen and (min-width: 1024px) {
   p.content,
@@ -3722,6 +3796,9 @@ div.guide p.title {
     border-bottom-left-radius: 25px 9px;
     -moz-border-radius-bottomleft: 25px 9px;
     -webkit-border-bottom-left-radius: 25px 9px;
+  }
+  .slidedown h2 {
+    padding: 20px 15px;
   }
 }
 #html5Loader {

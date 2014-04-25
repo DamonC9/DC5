@@ -6,6 +6,7 @@
 	top: 0;
 	left: 0;
 	z-index: 9999;
+	overflow-y: scroll;
 }
 
 /* Overlay Colors */
@@ -32,6 +33,8 @@
 	z-index: 100;
 }
 
+.scroll-wrapper {position: static;}
+
 /* Menu style */
 .overlay nav {
 	text-align: center;
@@ -46,9 +49,10 @@
 	list-style: none;
 	padding: 0;
 	margin: 0 auto;
-	display: inline-block;
+	display: block;
 	height: 100%;
 	position: relative;
+	overflow-y: scroll;
 }
 
 .overlay ul li {
@@ -61,7 +65,7 @@
 }
 
 .overlay ul li a {
-	font-size: 54px;
+	font-size: inherit;
 	font-weight: 300;
 	display: block;
 	color: #fff;
@@ -100,16 +104,26 @@
 
 .tags-box {position: absolute; display: block; bottom: 40px; right: 30px; width: 185px; height: auto;
 
+	&.dark {
+		ul li .tag {background: @dark-tag;}
+	}
+	&.light {
+		ul li .tag {background: @light-tag;}
+	}
+
 	ul {width: 100%;
 		li {min-height: 0;
-			.tag {background: #484848; padding:0; margin:0 0 10px 0;
-				p {padding: 10px; color: white;
+			.tag { padding:0; margin:0 0 10px 0;
+				p {padding: 10px; color: white; font-size: 13px;
 					span {float: right; font-size: 22px;}	
 				}
 			}	
 		}
 	}
 }
+
+
+
 
 @media screen and (max-height: 30.5em) {
 	.overlay nav {
@@ -118,6 +132,18 @@
 	}
 	.overlay ul li {
 		min-height: 34px;
+	}
+
+}
+
+@media screen and (max-width: 64.0em) {
+	
+	.tags-box {position: relative; width: 100%; padding-top: 1em; left: inherit; top: inherit;
+
+		ul {
+
+			li {display: inline-block; width: 185px; padding-right: .5em;}
+		}
 	}
 }
 
