@@ -685,7 +685,7 @@ function redrawDotNav(){
 
 
 
-    $("#trigger-overlay").click(function(){
+    $(".trigger-overlay").click(function(){
         $(".toolbar").css("z-index" , "200");
             $("html,body").css("overflow","hidden");
 
