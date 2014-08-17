@@ -266,7 +266,7 @@ Not advised to edit stuff below this line
     -moz-appearance: none;
     appearance: none;
 
-    border: 2px solid #e5e5e5;
+    border: 2px solid #799B97
     -webkit-transition: border-color 0.3s;
     -moz-transition: border-color 0.3s;
     -ms-transition: border-color 0.3s;
@@ -475,7 +475,7 @@ Not advised to edit stuff below this line
 .formoid-metro-cyan .element-file .file_text,
 .formoid-metro-cyan  select,
 .formoid-metro-cyan button{
-    border: solid 1px #e5e5e5;
+    border: solid 1px #799B97;
     border-radius: 0;
     background: #092024;
     -webkit-transition: border-color 0.3s;

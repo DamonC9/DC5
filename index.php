@@ -65,10 +65,10 @@ $.html5Loader({
     <div class="slidedown -lft">
       <span id="user-close">X</span>
       <h2>Damon Carlstrom</h2>
-      <div class="fltlft">
+      <div class="fltlft resume-dials">
         <img src="images/_svg/skill-dials2.svg" alt="">
       </div>
-      <div style="float: left; height: 260px;">
+      <div style="float: left; height: 260px;" class="resume-list">
         <h3>Experience</h3>
         <p>UX Specialist</p>
         <p>Front-End Developer</p>
@@ -163,13 +163,13 @@ $.html5Loader({
     <!-- end #home--></div>
     <?php include 'about.php'; ?>
 
-    <?php include 'interface.php'; ?>
+    <?php include 'interface1.php'; ?>
 
     <?php include 'animation.php'; ?>
 
     <?php include 'ux1.php'; ?>
 
-    <?php include 'print.php'; ?>
+    <?php include 'print1.php'; ?>
 
     <?php include 'art.php'; ?>
   
@@ -178,8 +178,8 @@ $.html5Loader({
 <!-- end outer container --> 
 
 <script type="text/javascript" src="js/jquery.parallax-1.1.js"></script> 
-<script src="js/jquery.scrollTo-1.4.3.1.min.js"></script> 
-<script src="js/waypoints.min.js"></script> 
+<script type="text/javascript" src="js/jquery.scrollTo-1.4.3.1.min.js"></script> 
+<script type="text/javascript" src="js/waypoints.min.js"></script> 
 <script type="text/javascript" src="templates/default/js/osmplayer.teaser.default.js"></script> 
 <script type="text/javascript" src="templates/default/js/osmplayer.controller.default.js"></script> 
 <script type="text/javascript" src="templates/default/js/osmplayer.pager.default.js"></script> 

@@ -5,17 +5,32 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	z-index: 9999;
+	z-index: 999;
 	overflow-y: scroll;
 }
 
 /* Overlay Colors */
-.overlay-ux1 {background: #631F1F;}
+.overlay-ux1 {background: @ux1-bg;}
+.overlay-ux2 {background: @ux2-bg;}
+.overlay-digital1 {background: @digital1-bg;}
+.overlay-digital2 {background: @digital2-bg;}
 
 /* Highlight Colors */
 .overlay-ux1 .sky-tabs > input:checked + label span span, 
 .overlay-ux1 .sky-tabs > input + label span span:hover,
 .overlay-ux1 .sky-tabs > label:hover span span  {background: @ux1-highlight;}
+
+.overlay-ux2 .sky-tabs > input:checked + label span span, 
+.overlay-ux2 .sky-tabs > input + label span span:hover,
+.overlay-ux2 .sky-tabs > label:hover span span  {background: @ux2-highlight;}
+
+.overlay-digital1 .sky-tabs > input:checked + label span span, 
+.overlay-digital1 .sky-tabs > input + label span span:hover,
+.overlay-digital1 .sky-tabs > label:hover span span  {background: @digital1-highlight;}
+
+.overlay-digital2 .sky-tabs > input:checked + label span span, 
+.overlay-digital2 .sky-tabs > input + label span span:hover,
+.overlay-digital2 .sky-tabs > label:hover span span  {background: @digital2-highlight;}
 
 /* Overlay closing cross */
 .overlay .overlay-close {
@@ -98,8 +113,8 @@
 }
 
 .overlay-content {padding: 10px 0 0 0; line-height:1.7em; width:100%; display: block;
-	h1 {margin-bottom:12px;}
-	p {font-size: 1.1em;}
+	h1 {margin-bottom:10px;}
+	p {font-size: 1.1em; margin-top: 3px;}
 }
 
 .tags-box {position: absolute; display: block; bottom: 40px; right: 30px; width: 185px; height: auto;
