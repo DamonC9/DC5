@@ -1,0 +1,280 @@
+﻿body {
+  margin:0px;
+  background-image:none;
+  position:static;
+  left:auto;
+  width:670px;
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
+}
+#base {
+  position:absolute;
+  z-index:0;
+}
+#u0 {
+  position:absolute;
+  left:0px;
+  top:20px;
+  width:435px;
+  height:37px;
+}
+#u0_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:435px;
+  height:37px;
+}
+#u1 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:435px;
+  white-space:nowrap;
+}
+#u2 {
+  position:absolute;
+  left:220px;
+  top:180px;
+  width:450px;
+  height:42px;
+}
+#u2_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:450px;
+  height:42px;
+  background-image:;
+  text-align:left;
+  font-family:'Arial';
+  font-size:20px;
+  color:#000000;
+  font-weight:normal;
+  font-style:normal;
+  text-decoration:none;
+}
+#u3 {
+  position:absolute;
+  left:220px;
+  top:238px;
+  width:450px;
+  height:42px;
+}
+#u3_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:450px;
+  height:42px;
+  background-image:;
+  text-align:left;
+  font-family:'Arial';
+  font-size:20px;
+  color:#000000;
+  font-weight:normal;
+  font-style:normal;
+  text-decoration:none;
+}
+#u4 {
+  position:absolute;
+  left:220px;
+  top:295px;
+  width:140px;
+  height:45px;
+}
+#u4_input {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:140px;
+  height:45px;
+  background-image:url(../../resources/images/transparent.gif);
+  text-align:center;
+  font-family:'Arial';
+  font-size:20px;
+  color:#000000;
+  font-weight:normal;
+  font-style:normal;
+  text-decoration:none;
+}
+#u5 {
+  position:absolute;
+  left:370px;
+  top:310px;
+  width:300px;
+  height:15px;
+}
+#u5_img {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:300px;
+  height:15px;
+}
+#u6 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:300px;
+  word-wrap:break-word;
+}
+body.a {  background-color:rgba(255, 255, 255, 1);
+  background-image:none;
+  position:static;
+  left:auto;
+  width:670px;
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
+}
+#u0.a {
+}
+#u2.a {
+  position:absolute;
+  left:220px;
+  top:180px;
+  width:450px;
+  height:42px;
+}
+#u2_input.a {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:450px;
+  height:42px;
+  background-image:;
+  text-align:left;
+  font-family:'Arial';
+  font-size:20px;
+  color:#000000;
+  font-weight:normal;
+  font-style:normal;
+  text-decoration:none;
+}
+#u3.a {
+  position:absolute;
+  left:220px;
+  top:238px;
+  width:450px;
+  height:42px;
+}
+#u3_input.a {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:450px;
+  height:42px;
+  background-image:;
+  text-align:left;
+  font-family:'Arial';
+  font-size:20px;
+  color:#000000;
+  font-weight:normal;
+  font-style:normal;
+  text-decoration:none;
+}
+#u4.a {
+  position:absolute;
+  left:220px;
+  top:295px;
+  width:140px;
+  height:45px;
+}
+#u4_input.a {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:140px;
+  height:45px;
+  background-image:url(../../resources/images/transparent.gif);
+  text-align:center;
+  font-family:'Arial';
+  font-size:20px;
+  color:#000000;
+  font-weight:normal;
+  font-style:normal;
+  text-decoration:none;
+}
+#u5.a {
+}
+body.b {  background-color:rgba(255, 255, 255, 1);
+  background-image:none;
+  position:static;
+  left:auto;
+  width:670px;
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
+}
+#u0.b {
+}
+#u2.b {
+  position:absolute;
+  left:220px;
+  top:180px;
+  width:450px;
+  height:42px;
+}
+#u2_input.b {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:450px;
+  height:42px;
+  background-image:;
+  text-align:left;
+  font-family:'Arial';
+  font-size:20px;
+  color:#000000;
+  font-weight:normal;
+  font-style:normal;
+  text-decoration:none;
+}
+#u3.b {
+  position:absolute;
+  left:220px;
+  top:238px;
+  width:450px;
+  height:42px;
+}
+#u3_input.b {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:450px;
+  height:42px;
+  background-image:;
+  text-align:left;
+  font-family:'Arial';
+  font-size:20px;
+  color:#000000;
+  font-weight:normal;
+  font-style:normal;
+  text-decoration:none;
+}
+#u4.b {
+  position:absolute;
+  left:220px;
+  top:295px;
+  width:140px;
+  height:45px;
+}
+#u4_input.b {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:140px;
+  height:45px;
+  background-image:url(../../resources/images/transparent.gif);
+  text-align:center;
+  font-family:'Arial';
+  font-size:20px;
+  color:#000000;
+  font-weight:normal;
+  font-style:normal;
+  text-decoration:none;
+}
+#u5.b {
+}

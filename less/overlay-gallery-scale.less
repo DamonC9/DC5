@@ -7,6 +7,11 @@
 	left: 0;
 	z-index: 999;
 	overflow-y: scroll;
+
+	&.dark {
+		h1, h2, h3, h4, h5 ,h6, p, span {color: black;}
+		
+	}
 }
 
 /* Overlay Colors */
@@ -14,6 +19,8 @@
 .overlay-ux2 {background: @ux2-bg;}
 .overlay-digital1 {background: @digital1-bg;}
 .overlay-digital2 {background: @digital2-bg;}
+.overlay-print1 {background: @print1-bg;}
+.overlay-art1 {background: @art1-bg};
 
 /* Highlight Colors */
 .overlay-ux1 .sky-tabs > input:checked + label span span, 
@@ -32,65 +39,53 @@
 .overlay-digital2 .sky-tabs > input + label span span:hover,
 .overlay-digital2 .sky-tabs > label:hover span span  {background: @digital2-highlight;}
 
+.overlay-print1 .sky-tabs > input:checked + label span span, 
+.overlay-print1 .sky-tabs > input + label span span:hover,
+.overlay-print1 .sky-tabs > label:hover span span  {background: @print1-highlight;}
+
+.overlay-art1 .sky-tabs > input:checked + label span span, 
+.overlay-art1 .sky-tabs > input + label span span:hover,
+.overlay-art1 .sky-tabs > label:hover span span  {background: @art1-highlight;}
+
 /* Overlay closing cross */
 .overlay .overlay-close {
-	width: 40px;
-	height: 40px;
+	width: 54px;
+	height: 54px;
 	position: absolute;
-	right: 15px;
-	top: 15px;
+	right: 0px;
+	top: 0px;
 	overflow: hidden;
 	border: none;
-	background: url(../images/cross.png) no-repeat center center;
+	background: #1f1f1f;
 	text-indent: 200%;
 	color: transparent;
 	outline: none;
 	z-index: 100;
+	cursor: pointer;
+
+	.close-icon {position: absolute; width: 16px; height: 16px; background: url(../images/cross.png) no-repeat center center; top: 19px; right: 19px; color: transparent; outline: none; border: none; cursor: pointer;
+
+		&.dark {background: url(../images/cross-dark.png) no-repeat center center;}
+		
+	}
 }
 
 .scroll-wrapper {position: static;}
 
 /* Menu style */
-.overlay nav {
-	text-align: center;
-	position: relative;
-	top: 50%;
-	height: 60%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
+.overlay nav { text-align: center; position: relative; top: 50%; height: 60%; -webkit-transform: translateY(-50%); transform: translateY(-50%);
+	
+	ul {list-style: none; padding: 0; margin: 0 auto; display: block; height: 100%; position: relative;
 
-.overlay ul {
-	list-style: none;
-	padding: 0;
-	margin: 0 auto;
-	display: block;
-	height: 100%;
-	position: relative;
-	overflow-y: scroll;
-}
+		li {display: block; height: 20%; height: calc(100% / 5); min-height: 54px; -webkit-backface-visibility: hidden; 
+		backface-visibility: hidden;
 
-.overlay ul li {
-	display: block;
-	height: 20%;
-	height: calc(100% / 5);
-	min-height: 54px;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
+			a {font-size: inherit; font-weight: 300; display: block; color: #fff; -webkit-transition: color 0.2s; transition: color 0.2s;
 
-.overlay ul li a {
-	font-size: inherit;
-	font-weight: 300;
-	display: block;
-	color: #fff;
-	-webkit-transition: color 0.2s;
-	transition: color 0.2s;
-}
-
-.overlay ul li a:hover,
-.overlay ul li a:focus {
-	color: #f0f0f0;
+				&:hover, &:focus {color: #f0f0f0;}
+			}
+		}
+	}
 }
 
 /* Effects */
@@ -112,8 +107,8 @@
 	transition: transform 0.4s, opacity 0.4s;
 }
 
-.overlay-content {padding: 10px 0 0 0; line-height:1.7em; width:100%; display: block;
-	h1 {margin-bottom:10px;}
+.overlay-content {padding: 15px 0 0 0; line-height:1.7em; width:100%; display: block;
+	h1 {margin-bottom: 8px; font-weight: 100; font-size: 2.1em; line-height:1.1em;}
 	p {font-size: 1.1em; margin-top: 3px;}
 }
 
@@ -127,9 +122,13 @@
 	}
 
 	ul {width: 100%;
-		li {min-height: 0;
+
+		li {min-height: 0; list-style: none;
+
 			.tag { padding:0; margin:0 0 10px 0;
+
 				p {padding: 10px; color: white; font-size: 13px;
+
 					span {float: right; font-size: 22px;}	
 				}
 			}	
@@ -163,5 +162,5 @@
 }
 
 @media screen and (max-width: 1280px) {
-	.overlay-content {padding: 10px;}
+	.overlay-content {padding: 15px 10px 10px 10px;}
 }

@@ -1,4 +1,5 @@
-<?php $form_path='formoid1/form.php'; require_once $form_path; ?><!DOCTYPE HTML>
+<?php $form_path='formoid1/form.php'; require_once $form_path; ?>
+<!DOCTYPE HTML>
 <html>
 <head>
 <!--[if lt IE 9]>
@@ -14,12 +15,11 @@
 <meta property="og:description" content="Damon Carlstrom - Creative portfolio of UI/UX design, Front-End Development, 2D and 3D motion graphics and animation, and other graphic design." />
 
 
-<link rel="stylesheet" href="css/bootstrap.css"  type="text/css">
+<link rel="stylesheet" href="css/style.css"  type="text/css">
 <link rel="stylesheet" href="templates/default/css/osmplayer_default.css" type="text/css">
 <link rel="stylesheet" href="jquery-ui/mint-choc/jquery-ui-1.8.18.custom.css" type="text/css">
 
 
-<style>.edgeLoad-pw_button{display:none}</style>
 <script src="js/jquery-latest.min.js" type="text/javascript"></script>
 <script src="js/animations/jQuery.html5Loader.circular.js" type="text/javascript"></script>
 <script src="js/jQuery.html5Loader.js" type="text/javascript"></script>
@@ -27,7 +27,7 @@
 <script type="text/javascript" src="bin/osmplayer.compressed.js"></script>
 <script type="text/javascript" src="templates/default/js/osmplayer.default.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script> 
-<script type="text/javascript" charset="utf-8" src="Power4_edgePreload.js"></script>
+
 <script type="text/javascript" src="js/snap.svg-min.js"></script>
 <script type="text/javascript" src="js/modernizr.custom.5.js"></script>
 <script type="text/javascript">
@@ -52,7 +52,7 @@ $.html5Loader({
     <div class="top_tab left_tab">
       <div class="triangle-topleft tri-large-left"></div> 
         <div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b" style="padding-left: .5em;">
-         <span class="icon-user hi-icon"></span>
+          <span class="icon-user hi-icon"></span>
         </div>
     </div>
     <div class="top_tab right_tab">
@@ -86,11 +86,11 @@ $.html5Loader({
       <a href="#"><div class="btn" role="button">Resume</div></a>
       <a href="#"><div class="btn" role="button">CV</div></a>
       <div class="slidedown-icons">
-        <a href=""><span class="icon-facebook fltlft fs2"></span></a>
-        <a href=""><span class="icon-linkedin fltlft fs2"></span></a>
-        <a href=""><span class="icon-github fltlft fs2"></span></a>
-        <a href=""><span class="icon-behance fltlft fs2"></span></a>
-        <a href=""><span class="icon-vimeo fltlft fs2"></span></a>
+        <a href="https://www.facebook.com/damon.carlstrom"><span class="icon-facebook fltlft fs2"></span></a>
+        <a href="www.linkedin.com/pub/damon-carlstrom/18/35b/181/"><span class="icon-linkedin fltlft fs2"></span></a>
+        <a href="https://github.com/DamonC9"><span class="icon-github fltlft fs2"></span></a>
+        <a href="https://www.behance.net/DamonC9"><span class="icon-behance fltlft fs2"></span></a>
+        <a href="https://vimeo.com/user23936698"><span class="icon-vimeo fltlft fs2"></span></a>
       </div>
     </div>
 
@@ -100,7 +100,7 @@ $.html5Loader({
       {{Formoid}}
      </div>
 
-    <nav class="current">
+    <nav class="current" role="navigation">
       <div id="triangle-topright" class="triangle-topright"></div>
       <div id="triangle-topleft" class="triangle-topleft"></div>
         <ul>
@@ -144,8 +144,15 @@ $.html5Loader({
           <h3 style="color: white; background-color:#4b6a50;">Aspiring World Traveler</h3>
         </div>
       </div>
-      <div id="Stage" class="pw_button"></div>
-      <div id="nav_lines">
+
+      <!-- <div id="Stage" class="pw_button"></div> -->
+      <div class="pwr_btn">
+        <div class="base-btn"></div>
+        <div class="lightson"></div>
+        <div class="glass"></div> 
+      </div>
+
+      <nav id="nav_lines" role="navigation">
         <h3 id="nav_resume" class="x_nav"><a href="resume.html">Resume</a></h3>
         <h3 id="nav_contact" class="x_nav"><a href="contact.php">Contact</a></h3>
         <h3 id="nav_about" class="x_nav"><a href="#about" >About</a></h3>
@@ -154,7 +161,7 @@ $.html5Loader({
        <h3 id="nav_concepts" class="x_nav"><a href="#concepts">UX</a></h3>
         <h3 id="nav_print" class="x_nav"><a href="#print">Print</a></h3>
         <h3 id="nav_art" class="x_nav"><a href="#art">Art</a></h3>
-      </div>
+      </nav>
       <!-- end .nav_lines --> 
     </div>
     <!-- end .home_nav -->
@@ -171,7 +178,7 @@ $.html5Loader({
 
     <?php include 'print1.php'; ?>
 
-    <?php include 'art.php'; ?>
+    <?php include 'art1.php'; ?>
   
   
 </div>
@@ -188,6 +195,7 @@ $.html5Loader({
 <script type="text/javascript" src="js/svgicons-config.js"></script>
 <script type="text/javascript" src="js/svgicons.js"></script>
 <script type="text/javascript" src="js/classie.js"></script>
+<script type="text/javascript" src="js/svganimations.js"></script>
 <script type="text/javascript" src="js/demo1.js"></script>
 <script type="text/javascript" src="js/html5gallery.js"></script>
 <script type="text/javascript" src="js/responsive.min.js"></script>

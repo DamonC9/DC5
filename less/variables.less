@@ -35,10 +35,12 @@
 @light-tag:				#414349;
 
 // Overlays
-@ux1-bg:				#631F1F;
+@ux1-bg:				#812727;
 @ux2-bg:				#c05a4a;
 @digital1-bg:			#2b3349;
 @digital2-bg:			#105b64;
+@print1-bg:				#5e3648;
+@art1-bg:				#e8d791; 
 
 
 // Highlight Invert
@@ -46,12 +48,16 @@
 @ux2-invert:			spin(@ux2-bg, 180);
 @digital1-invert:		spin(@digital1-bg, 180);
 @digital2-invert:		spin(@digital2-bg, 180);
+@print1-invert:			spin(@print1-bg, 180);
+@art1-invert:			spin(@art1-bg, 180);
 
 // Highlight Invert Lighten
-@ux1-highlight:			lighten(@ux1-invert, 16%);
-@ux2-highlight:			lighten(@ux2-invert, 16%);
+@ux1-highlight:			lighten(@ux1-invert, 6%);
+@ux2-highlight:			darken(@ux2-invert, 10%);
 @digital1-highlight:	#ec634e;
-@digital2-highlight:	lighten(@digital2-invert, 16%);
+@digital2-highlight:	#bd3b3b;
+@print1-highlight:		lighten(@print1-invert, 15%);
+@art1-highlight:		darken(@art1-invert, 11%);
 
 
 

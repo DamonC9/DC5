@@ -286,13 +286,13 @@ Not advised to edit stuff below this line
 }
 
 .formoid-metro-cyan input[type=submit] {
-	font-size: 1em;
+	font-size: 0.9em;
     text-align: center;
     opacity: 0.8;
 	color: black;
     border: none;
     right: 20px;
-    padding: 0.8em 2em;
+    padding: 0.9em 2em;
     margin-left: 25px;
     font-weight: normal;
     text-transform: uppercase;
@@ -713,8 +713,18 @@ Not advised to edit stuff below this line
 }
 .formoid-metro-cyan input[type=submit],
 .formoid-metro-cyan .element-file .button{
-    background-color: #1dc282;
+    background-color: rgba(14,181,102,1);
 }
+
+.formoid-metro-cyan input[type=submit]:hover,
+.formoid-metro-cyan .element-file .button{
+    background-color: #0ba9d0;
+    -webkit-transition: all .5s linear; 
+    -moz-transition: all .5s linear; 
+    transition: all .5s linear;
+}
+
+
 .formoid-metro-cyan input[type=checkbox]:hover+span:before,
 .formoid-metro-cyan input[type=radio]:hover+span:before{
     color: #a3f1b9;

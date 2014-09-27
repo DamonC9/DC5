@@ -1,0 +1,517 @@
+body {
+	font: 100%/1.4 @main-font;
+	margin: 0;
+	padding: 0;
+	background: black;
+}
+.hidden{overflow: hidden;}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .current list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 20px;
+	padding-left: 20px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+
+a {
+	img {border: none;}
+	&:link {color: #9f9e9e; text-decoration: none;}
+	&:visited {color: #4E5869; text-decoration: underline;}
+	&:hover, &:active, &:focus {text-decoration: none;}
+}
+
+.outer_container {
+	width: 100%;
+	/*max-width: 1260px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
+	min-width: 768px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+ background:;
+	margin: 0;
+}
+/* ~~ This is the layout information. ~~ */
+
+.content {
+	
+}
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol,  {
+	padding: 0 15px 15px 40px; font-family: @main-font; font-size: 15px; color: white; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+p.content, .info-box li {font-family: @main-font; font-size: 14px; font-weight: 100; color: white; letter-spacing: .05em;}
+
+ul, ol, dl {padding: 0 15px 20px 40px; font-family: @main-font; font-size: 15px; color: white; line-height: 1.4em;}
+
+li {margin-bottom: 7px;}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the overflow:hidden on the .container is removed */
+	clear: both;
+	height: 0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+#copyright {position: fixed; bottom: 0; right: 0; padding: 0 5px 5px 0; margin: 0; 	font-family: @main-font;
+	font-weight: 100; font-size: 13px; color: #999;z-index: 999; background: rgba(0, 0, 0, .85);}
+
+p#copyright{padding: 3px 5px;}
+
+#osmplayer {
+	position: absolute;
+	top: 490px;
+	left: 105px;
+}
+/******************  Begin Home  ****************/
+.home_container {
+	background-color: #1c1b1b;
+	height: 1000px;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	z-index: 800;
+}
+#home_nav h1 {
+	
+}
+#home_nav {margin: 0 auto; width: 460px; height: 500px;
+
+	h1 {font-family: @main-font; font-size: 40px; color: @neon-light-green; font-weight: 100;letter-spacing: 2px; margin: 0 auto; padding: 50px 0px 0px 63px;}
+}
+
+#nav_lines h3{font-family: @main-font; font-weight: 300;letter-spacing: 1px;font-size: 14px; position: absolute; z-index:10;
+	
+	a{color: #e7e7e7;
+
+		&:link {-webkit-transition: all .3s linear; -moz-transition: all .3s linear; transition: all .3s linear;}
+
+		&:hover, &:active {color: #eef4ff; text-shadow: 1px 1px 1px #5A5A5A; text-decoration: none; text-shadow: 0 0 2px #fff, 0 0 4px #0C6, 0 0 7px #0C6, 0 0 8px #0C6;}
+	}
+}
+
+h3#nav_resume {
+	top: -13px;
+	left: 21px;
+}
+h3#nav_contact {
+	top: -14px;
+	left: 344px;
+}
+h3#nav_about {
+	top: 43px;
+	left: -11px;
+}
+h3#nav_interface {
+	top: 216px;
+	left: -14px;
+}
+h3#nav_animation {
+	top: 274px;
+	left: 20px;
+}
+h3#nav_print {
+	top: 216px;
+	left: 400px;
+}
+h3#nav_concepts {
+	top: 274px;
+	left: 382px;
+}
+h3#nav_art {
+	top: 43px;
+	left: 409px;
+}
+
+#city{width: 100%; display: block;  position: absolute; padding: 0; margin: 0; bottom: 0; left: 0;}
+
+#logo {background-image: url(../images/dc_home.jpg); width: 267px; height: 177px; display: block; position: absolute; z-index: 0; top: 165px; left: 460px;}
+/******************  End Home  ****************/
+
+/****************  Info box  **************/
+.info-box {
+	background: black /* IE8 Support */;
+	background: rgba(0,0,0,.85);
+	width: 350px;
+	height: 100px;
+	position: absolute;
+	z-index: 650;
+	overflow: hidden;
+}
+	
+.info-box header {font-family: @main-font;
+	font-size: 42px;
+	color: @neon-light-green;
+	font-weight: 100;
+	letter-spacing: 1px;
+	padding: 6px 10px 0px 16px;
+	margin: 0;
+}
+
+#animation-box header {font-family: @main-font;
+	font-size: 42px;
+	color: @neon-light-green;
+	font-weight: 100;
+	letter-spacing: 1px;
+	padding: 6px 10px 0px 16px;
+	margin: 0;	
+}
+
+.large-link {font-family: @main-font;
+	font-size: 26px;
+	color: @neon-light-green;
+	font-weight: 100;
+	margin: 0;
+	cursor: pointer;	
+}
+
+.large-link:hover {font-family: @main-font;
+	font-size: 26px;
+	color: #0ba9d0;
+	font-weight: 100;
+	margin: 0;
+	cursor: pointer;
+}	
+
+.inner-content {padding: 20px; 
+
+	p{font-family: @main-font; font-size: 14px; font-weight: 100; color: white; letter-spacing: .05em;line-height: 1.7em; color: white; }
+}
+
+.pd-top0 {padding-top: 0;
+	p {letter-spacing: .1em; padding:0;}
+}
+
+.button-area {float: right; width: 130px; height: 50px;  position: relative; padding: 20px 20px 0 0;
+
+		p {float: right; font-size: 12px; color: #ececec; font-family: @main-font;letter-spacing: 1px; padding: 4px 0 0 0; margin: 0;}
+		.title-open{display: block; padding-right: 5px; margin-top: -4px;}
+		.title-close{display: none; padding-right: 5px; margin-top: -4px;}
+}
+.button-area2 {float: left; width: 150px; height: 50px;  position: absolute; padding: 10px 0 0 190px;
+
+		p {float: right; font-size: 12px; color: #ececec; font-family: @main-font;letter-spacing: 1px; padding: 4px 0 0 0; margin: 0;}
+		.title-open{display: block; padding-right: 5px; margin-top: -4px;}
+		.title-close{display: none; padding-right: 5px; margin-top: -4px;}
+}
+
+.open-close-btn {background: @neon-green;  position: relative; width: 34px; height: 34px; z-index: 70; float: right; display: block; cursor: pointer;  -webkit-transition: all .3s linear; -moz-transition: all .3s linear; transition: all .3s linear;
+
+           &:hover {background: @neon-blue;  cursor: pointer;}
+           &:active {background: @neon-blue;  cursor: pointer;}
+           h2{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-weight: 100; font-size: 40px; color: black; text-shadow: 3px 3px 2px #000 inset; margin: -12px 0 0 -9px;  display: block;}
+           h3{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-weight: 100; font-size: 30px; color: black; text-shadow: 3px 3px 2px #000 inset; margin: -16px 0 0 -6px;  position: absolute; display: none;}
+}
+
+.resume-dials {padding-left: 5px; float: left;}
+.resume-list {
+	h1, h2, h3, h4, h5, h6, p {padding-left: 5px; padding-right: 5px;}
+
+}
+
+.slidedown-icons {padding-top: 10px;}
+
+.invert {
+-ms-transform:rotate(180deg); /* IE 9 */
+-moz-transform:rotate(180deg); /* Firefox */
+-webkit-transform:rotate(180deg); /* Safari and Chrome */
+-o-transform:rotate(180deg); /* Opera */
+}
+
+p.info-title {color: #ececec; font-family: @main-font; font-size: 16px; margin-top: -3px; letter-spacing: .1em; font-weight: 200;}
+
+/**************************
+
+ Parallax Layers and Sections 
+
+ ***************************/
+
+ #about-box {
+	
+	position: absolute;
+	top: 500px;
+	right: 7%;
+	z-index: 650;
+	overflow: hidden;
+	
+	}
+#interface-box {
+	
+	position: absolute;
+	top: 450px;
+	right: 7%;
+	z-index: 650;
+	overflow: hidden;
+	
+	}
+	
+#animation-box {
+	background: black /* IE8 Support */;
+	background: rgba(0,0,0,.85);
+	position: absolute;
+	bottom: 200px;
+	left: 2%;
+	z-index: 650;
+	overflow: hidden;
+	height: 100px;
+	width: 350px;
+	opacity: .85;
+	
+	}
+
+#print-box {
+	
+	position: absolute;
+	bottom: 200px;
+	left: 6%;
+	z-index: 650;
+	overflow: hidden;
+	
+	}
+	
+#concepts-box {
+	
+	position: absolute;
+	bottom: 200px;
+	right: 7%;
+	z-index: 650;
+	overflow: hidden;
+	
+	}
+	
+#art-box {
+
+	position: absolute;
+	bottom: 200px;
+	right: 7%;
+	z-index: 650;
+	overflow: hidden;
+	
+	}
+
+.skrollable {
+	/*
+	 * First-level skrollables are positioned relative to window
+	 */
+	position:fixed;
+
+	/*
+	 * Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
+	 */
+	z-index:100;
+}
+
+.skrollr-mobile .skrollable {
+	/*
+		May cause issues on Android default browser (see #331 on GitHub).
+	*/
+	position:absolute;
+}
+
+.skrollable .skrollable {
+	/*
+	 * Second-level skrollables are positioned relative their parent skrollable
+	 */
+	position:absolute;
+}
+
+.skrollable .skrollable .skrollable {
+	/*
+	 * Third-level (and below) skrollables are positioned static
+	 */
+	position:static;
+}
+
+/************************* 
+Begin About Section
+*************************/ 
+
+#about {
+	background-color: #0e0e0e;
+	height: 1450px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+#lab {
+	background-color: #0e0e0e;
+	background: url(../images/lab.jpg) 100% 70% no-repeat fixed;
+	height: 1450px;
+	width: 100%;
+	
+}
+#my-face { position: absolute; top: 900px; left: 5px; width: 230px; max-width: 100%; z-index: 20; display: block; float: left; }
+/** rings end at 280 **/
+#outer-ring { position: absolute; top: 340px; left: 85px; width: 249px; height: 250px; z-index: 20; display: block; float: left;}
+#middle-ring { position: absolute; top: 340px; left: 85px; width: 249px; height: 250px; z-index: 20; display: block; float: left;}
+#inner-ring { position: absolute; top: 340px; left: 85px; width: 249px; height: 250px; z-index: 20; display: block; float: left;}
+#target{ position: absolute; top: 700px; left: 385px; width: 102px; height: 102px; z-index: 30; display: block; float: left;}
+#vertical-scale{ position: absolute; top: 430px; left: 285px; width: 23px; height: 264px; z-index: 30; display: block; float: left;}
+
+/*************************  
+Begin Interface Section
+*************************/
+
+#interface {
+	background-color: #000;
+	height: 1450px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+#space {
+	background-color: #000;
+	background: url(../images/planet.png) 0 0 no-repeat fixed;
+	height: 1450px;
+	width: 100%;
+	/*background-size: auto;
+-moz-background-size: cover;
+  background-size: cover;*/
+	}
+	
+#control-panel {
+	position: relative;
+	width: 1014px;
+	height: 158px;
+	margin: 0 auto;	
+}
+
+#panel-sliver {
+	position: relative;
+	width: 100%;
+	height: 158px;
+	background: url(../images/control-panel-sliver.png) 50% 100% repeat-x;
+	top: 600px;
+}
+/************************ 
+Begin Animation Section
+*************************/
+
+#animation {
+	background-color: black;
+	height: 1450px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;	
+}
+
+#jungle-bg {
+	background-color: #0e0e0e;
+	background: url(../images/jungle-back.jpg) 50% 0% no-repeat fixed;
+	height: 1450px;
+	width: 100%;
+	/*background-size: auto;
+-moz-background-size: cover;
+  background-size: cover;*/
+	}
+	
+#branch {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 863px;
+	height: 816px;
+	z-index: 40;
+	padding-left: 40px;
+	margin-left: 40px; 
+}
+
+/*********************  
+Begin Print Section
+**********************/
+
+#print{
+	background: #f8f7d3;
+	height: 1450px;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	z-index: 400;	
+}
+
+#ink{
+	background-color: #f8f7d3;
+	background: url(../images/large-ink.jpg) 50% 0% no-repeat fixed;
+	height: 1450px;
+	width: 100%;
+	}
+	
+#front-ink1 {
+	position: absolute;
+	left: 100px;
+	bottom: 50px;
+	width: 332px;
+	height: 408px;
+	z-index: 400;
+}
+
+#front-ink2 {
+	position: absolute;
+	right: 20px;
+	top: 50px;
+	width: 611px;
+	height: 644px;
+	z-index: 40;
+}
+
+/********************* 
+Begin Concepts Section
+*********************/
+
+#concepts{
+background: #f0f0f0; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #f0f0f0 37%, #b2b2b2 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(37%,#f0f0f0), color-stop(100%,#b2b2b2)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #f0f0f0 37%,#b2b2b2 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #f0f0f0 37%,#b2b2b2 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #f0f0f0 37%,#b2b2b2 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  #f0f0f0 37%,#b2b2b2 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#b2b2b2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+height: 1450px;
+position: relative;
+width: 100%;
+overflow: hidden;
+z-index: 500;	
+}
+
+#gears{
+	background: url(../images/grid-paper.png) 0 0 repeat;
+	height: 1450px;
+	width: 100%;
+	}
+
+/******************  
+Begin Art Section 
+*******************/
+
+#art{
+	background: rgb(132, 50, 50);
+	height: 1450px;
+	position: relative;
+	width: 100%;
+	overflow: hidden;	
+	z-index: 600;
+}
+
+#face3d{
+	background: url(../images/artface2.png) 10% 30% no-repeat fixed;
+	height: 1050px;
+	position: relative;
+	width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+} 

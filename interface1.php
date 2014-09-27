@@ -1,6 +1,8 @@
  <section id="interface">
 <div class="overlay overlay-scale overlay-digital1">
-    <button type="button" class="overlay-close">Close</button>
+    <div class="overlay-close">
+      <span class="close-icon">Close</span>
+    </div>
     <div class="sky-tabs sky-tabs-pos-top-left sky-tabs-response-to-switcher">
       <input type="radio" name="sky-tabs-digital1" checked id="sky-tab1c" class="sky-tab-content-1">
       <label for="sky-tab1c"><span><span>Browder Capital</span></span></label>
@@ -18,7 +20,9 @@
     </div>
   </div>
   <div class = "overlay overlay-scale overlay-digital2">
-  <button type="button" class="overlay-close">Close</button>
+  <div class="overlay-close">
+      <span class="close-icon">Close</span>
+    </div>
     <div class="sky-tabs sky-tabs-pos-top-left sky-tabs-response-to-switcher">
       <input type="radio" name="sky-tabs-digital2" checked id="sky-tab1d" class="sky-tab-content-1">
       <label for="sky-tab1d"><span><span>World App</span></span></label>

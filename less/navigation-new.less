@@ -37,9 +37,9 @@
 
 	p {margin-bottom: 4px; color: white; font-size: .77em;}
 
-	.btn {border:1px solid white; padding: 10px; margin: .4em 1em; width: 35%; float: left; font-size: .7em; text-transform: uppercase; color: white; border-radius: 0px;
+	.btn { padding: 10px; margin: 1em 1.3em; width: 32%; float: left; font-size: .8em; text-transform: uppercase; color: black; border-radius: 0px; background: @neon-green; font-weight: normal;
 
-		&:hover, &:active {border-color: @neon-light-green; transition: .5s linear all; color: @neon-light-green;}
+		&:hover, &:active {transition: .5s linear all; -webkit-transition: .5s linear all; -moz-transition: .5s linear all; background: @neon-blue;}
 
 	}
 
@@ -186,6 +186,21 @@ color: #9f9e9e;
 	top: 230px;
 	z-index: 15;
 }
+
+.pwr_btn {position: relative;
+	margin: 0px auto;
+	top: 230px;
+	z-index: 15;
+	width: 158px;
+	height: 179px;
+}
+
+.base-btn, .lightson, .glass {position: absolute; top: 0; left: 0; width: 158px; height: 179px;}
+
+.base-btn {background: url(../images/_power/base.png);}
+.lightson {background: url(../images/_power/lightson.png);}
+.glass {background: url(../images/_power/glass.png);top: 5px;}
+
 #nav_lines {
 	background-image: url(../images/nav_lines.png);
 	background-repeat: no-repeat;

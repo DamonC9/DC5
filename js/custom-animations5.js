@@ -1,22 +1,7 @@
 // Custom site-wide Animations
+$(document).ready(function(){
 
-
-//(function($){ 
-		//$(window).load(function(){
-			//Home page title slide animation 
-			
-	    $(document).ready(function(){
-
-		$('#lab').parallax("100%", 2500, 0.4, true);
-		$('#space').parallax("50%", 12000, 0.05, true);
-		$('#jungle-bg').parallax("50%", 4200, 0.15, true);
-		$('#gears').parallax("50%", 5600, 0.30, true);
-        $('#ink').parallax("50%", 6700, 0.30, true);
-        $('#face3d').parallax("20%", 7700, 0.30, true);
-		
-
-slide();
-
+//Home page title slide animation 
 function slide() {
     $("#slide1").slideDown('slow').delay(5000).slideUp('slow').delay(5000);
     $("#slide2").slideUp(1).delay(6000).slideDown('slow').delay(5000).slideUp('slow').delay(5000);
@@ -27,7 +12,16 @@ function slide() {
     $("#slide7").slideUp(1).delay(36000).slideDown('slow').delay(5000).slideUp('slow' , slide);
     }   
 
-	
+slide();
+
+function powerloop() {
+    $(".lightson").animate({opacity: "0.50"}, 1350, "easeOutSine").delay(300).animate({opacity: "1"}, 1350, "easeInSine").delay(300);
+
+    setTimeout(powerloop, 3300);
+}
+
+powerloop();
+
 //Slide down toolbar when waypoint reached
 $('h3#nav_print').waypoint(function(direction) {
    if (direction === 'down') {
@@ -57,6 +51,7 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
     $(".overlay_text_mask *").css("font-weight" , "300");
     $("nav.current").css("width" , "509px");
     $("#triangle-topleft").css("marginLeft" , "509px");
+    $(".info-box header").css("font-weight" , "300");
 }
 
 //Contact tooltip - not in use
@@ -145,7 +140,7 @@ $("#mail-close").click(function() {
             $(".button-area #close-about").fadeOut("fast" , function () {
                
                     $(".button-area #open-about").fadeIn("fast" , function () { 
-                        $("#about-box").animate({height:"100px" , paddingTop: "0", marginTop: "0"}, 500); 
+                        $("#about-box").animate({height:"100px" , paddingTop: "0", marginTop: "0"}, 700); 
                     });
               
             });
@@ -160,7 +155,7 @@ $("#mail-close").click(function() {
             $(".button-area #open-interface").fadeOut("fast" , function () {
               
                     $(".button-area #close-interface").fadeIn("fast" , function () {
-                        $("#interface-box").animate({height:"2400px" , paddingTop: "900px", marginTop: "-900px"}, 1000);
+                        $("#interface-box").animate({height:"2400" , paddingTop: "900px", marginTop: "-900px"}, 1000);
                     });
              
             });
@@ -170,7 +165,7 @@ $("#mail-close").click(function() {
             $(".button-area #close-interface").fadeOut("fast" , function () {
                
                     $(".button-area #open-interface").fadeIn("fast" , function () { 
-                        $("#interface-box").animate({height:"100px" , paddingTop: "0", marginTop: "0"}, 1000); 
+                        $("#interface-box").animate({height:"100px" , paddingTop: "0", marginTop: "0"}, 700); 
                     });
              
             });
@@ -178,30 +173,6 @@ $("#mail-close").click(function() {
     }
 }); 
 
-//Animation box animation 
-        $("#oc_animation").click(function () {
-    if ($('.button-area2 #open-animation').is(':visible')) {
-       
-            $(".button-area2 #open-animation").fadeOut("fast" , function () {
-            
-                    $(".button-area2 #close-animation").fadeIn("fast" , function () {
-                        $("#animation-box").animate({width:"670px"}, 1000);
-                    });
-               
-            });
-        
-    } else {
-      
-            $(".button-area2 #close-animation").fadeOut("fast" , function () {
-            
-                    $(".button-area2 #open-animation").fadeIn("fast" , function () { 
-                        $("#animation-box").animate({width:"350px"}, 1000); 
-                    });
-               
-            });
-        
-    }
-}); 
 
 	//Print box animation 
 		$("#oc_print").click(function () {
@@ -220,7 +191,7 @@ $("#mail-close").click(function() {
             $(".button-area #close-print").fadeOut("fast" , function () {
                
                     $(".button-area #open-print").fadeIn("fast" , function () { 
-                        $("#print-box").animate({height:"100px" , paddingTop: "0", marginTop: "0"}, 1000); 
+                        $("#print-box").animate({height:"100px" , paddingTop: "0", marginTop: "0"}, 700); 
                     });
                
             });
@@ -245,7 +216,7 @@ $("#mail-close").click(function() {
             $(".button-area #close-concepts").fadeOut("fast" , function () {
                 
                     $(".button-area #open-concepts").fadeIn("fast" , function () { 
-                        $("#concepts-box").animate({height:"100px" , paddingTop: "0", marginTop: "0"}, 1000); 
+                        $("#concepts-box").animate({height:"100px" , paddingTop: "0", marginTop: "0"}, 700); 
                     });
                 
             });
@@ -270,7 +241,7 @@ $("#mail-close").click(function() {
             $(".button-area #close-art").fadeOut("fast" , function () {
               
                     $(".button-area #open-art").fadeIn("fast" , function () { 
-                        $("#art-box").animate({height:"100px" , paddingTop: "0", marginTop: "0"}, 1000); 
+                        $("#art-box").animate({height:"100px" , paddingTop: "0", marginTop: "0"}, 700); 
                     });
                
             });
@@ -394,7 +365,7 @@ $("#mail-close").click(function() {
 	    	parallaxScroll(); // Callback is required for iOS
 		});
     	return false;
-    	})
+    	});
 	});
 	
 		//Scrolls from Top nav interface 
@@ -523,7 +494,12 @@ $("#mail-close").click(function() {
     );  
 
 
-
+    $('#lab').parallax("100%", 3400, 0.3, true);
+    $('#space').parallax("20%", 5700, 0.05, true);
+    $('#jungle-bg').parallax("50%", 6500, 0.15, true);
+    $('#gears').parallax("50%", 7600, 0.30, true);
+    $('#ink').parallax("50%", 10300, 0.30, true);
+    $('#face3d').parallax("20%", 12200, 0.30, true);
 
 
 /* Scroll the background layers */
@@ -531,23 +507,23 @@ function parallaxScroll(){
 	var scrolled = $(window).scrollTop();
 	
 	//About Scrolling
-    $('#outer-ring').css('top',(620-(scrolled*.23))+'px');
-	$('#middle-ring').css('top',(620-(scrolled*.23))+'px');
-	$('#my-face').css('top',(290-(scrolled*.0))+'px');
-	$('#inner-ring').css('top',(620-(scrolled*.23))+'px');
-	$('#vertical-scale').css('top',(740-(scrolled*.40))+'px');
-	$('#target').css('top',(950-(scrolled*.52))+'px');
-	$('#about-box').css('top',(950-(scrolled*.52))+'px');
-	$('#interface-box').css('top',(1280-(scrolled*.52))+'px');
+    $('#outer-ring').css('top',(620-(scrolled*0.23))+'px');
+	$('#middle-ring').css('top',(620-(scrolled*0.23))+'px');
+	$('#my-face').css('top',(290-(scrolled*0.0))+'px');
+	$('#inner-ring').css('top',(620-(scrolled*0.23))+'px');
+	$('#vertical-scale').css('top',(740-(scrolled*0.40))+'px');
+	$('#target').css('top',(950-(scrolled*0.52))+'px');
+	$('#about-box').css('top',(950-(scrolled*0.52))+'px');
+	$('#interface-box').css('top',(1680-(scrolled*0.52))+'px');
 	
-	$('#animation-box').css('top',(1900-(scrolled*.52))+'px');
-	$('#branch').css('top',(50-(scrolled*.05))+'px');
+	$('#animation-box').css('top',(2680-(scrolled*0.52))+'px');
+	$('#branch').css('top',(50-(scrolled*0.05))+'px');
 	
-	$('#front-ink1').css('top',(1350-(scrolled*.15))+'px');
-	$('#front-ink2').css('top',(200-(scrolled*.0))+'px');
-	$('#print-box').css('top',(2500-(scrolled*.42))+'px');
-    $('#concepts-box').css('top',(2030-(scrolled*.42))+'px');
-    $('#art-box').css('top',(2900-(scrolled*.42))+'px');
+	$('#front-ink1').css('top',(1350-(scrolled*0.15))+'px');
+	$('#front-ink2').css('top',(200-(scrolled*0.0))+'px');
+	$('#print-box').css('top',(3800-(scrolled*0.42))+'px');
+    $('#concepts-box').css('top',(3000-(scrolled*0.42))+'px');
+    $('#art-box').css('top',(4480-(scrolled*0.42))+'px');
 	
 }
 
@@ -575,13 +551,13 @@ $(window).scroll(function(event, direction) {
 /* Set navigation dots to an active state as the user scrolls */
 function redrawDotNav(){
 	var section1Top =  0;
-	// The top of each section is offset by half the distance to the previous section.
-	var section2Top =  $('#about').offset().top - (($('#interface').offset().top - $('#about').offset().top) / 2); 
-	var section3Top =  $('#interface').offset().top - (($('#animation').offset().top - $('#interface').offset().top) / 2);
-	var section4Top =  $('#animation').offset().top - (($('#concepts').offset().top - $('#animation').offset().top) / 2);
-	var section5Top =  $('#concepts').offset().top - (($('#print').offset().top - $('#concepts').offset().top) / 2);
-	var section6Top =  $('#print').offset().top - (($('#art').offset().top - $('#print').offset().top) / 2);
-	var section7Top =  $('#art').offset().top - (($(document).height() - $('#art').offset().top) / 2);;
+	// The top of each section is offset by a quarter the distance to the previous section.
+	var section2Top =  $('#about').offset().top - (($('#interface').offset().top - $('#about').offset().top) / 4); 
+	var section3Top =  $('#interface').offset().top - (($('#animation').offset().top - $('#interface').offset().top) / 4);
+	var section4Top =  $('#animation').offset().top - (($('#concepts').offset().top - $('#animation').offset().top) / 4);
+	var section5Top =  $('#concepts').offset().top - (($('#print').offset().top - $('#concepts').offset().top) / 4);
+	var section6Top =  $('#print').offset().top - (($('#art').offset().top - $('#print').offset().top) / 4);
+	var section7Top =  $('#art').offset().top - (($(document).height() - $('#art').offset().top) / 4);
 	
 	
 	$('li.menu').removeClass('active');
@@ -602,88 +578,7 @@ function redrawDotNav(){
 	}
 	
 }
-
-//Ad gallery modal and img.click scrolling
-   /* $('img.image1').data('ad-desc', 'Whoa! This description is set through elm.data("ad-desc") instead of using the longdesc attribute.<br>And it contains <strong>H</strong>ow <strong>T</strong>o <strong>M</strong>eet <strong>L</strong>adies... <em>What?</em> That aint what HTML stands for? Man...');
-    $('img.image1').data('ad-title', 'Title through $.data');
-    $('img.image4').data('ad-desc', 'This image is wider than the wrapper, so it has been scaled down');
-    $('img.image5').data('ad-desc', 'This image is higher than the wrapper, so it has been scaled down');*/
-	/*var galleriesArr = new Array(); 
-    galleriesArr[0] = $('#modal-ui-1').adGallery();
-	galleriesArr[1] = $('#modal-ui-2').adGallery();
-    galleriesArr[2] = $('#modal-concepts-1').adGallery();
-    galleriesArr[3] = $('#modal-concepts-2').adGallery();
-    galleriesArr[4] = $('#modal-concepts-3').adGallery();
-    galleriesArr[5] = $('#modal-print-1').adGallery();
-    galleriesArr[6] = $('#modal-print-2').adGallery();
-    galleriesArr[0] = $('#modal-art-1').adGallery();
   
-   for (var i = 0; i < 1; i++) {
-    $('#switch-effect').change(
-      function() {
-        galleriesArr[i][0].settings.effect = $(this).val();
-        return false;
-      }
-    );
-    $('#toggle-slideshow').click(
-      function() {
-        galleriesArr[i][0].slideshow.toggle();
-        return false;
-      }
-    );
-    $('#toggle-description').click(
-      function() {
-        if(!galleriesArr[i][0].settings.description_wrapper) {
-          galleriesArr[i][0].settings.description_wrapper = $('#descriptions');
-        } else {
-          galleriesArr[i][0].settings.description_wrapper = false;
-        }
-        return false;
-      }
-    );
-}*/
-  
- function modalFadeIn()
- {
- 	         $("body").addClass('hidden');
-		   var galleriesArr = $(this).adGallery();
-          $('#switch-effect').change(
-		      function() {
-		        galleriesArr[0].settings.effect = $(this).val();
-		        return false;
-		      }
-		    );
-		    $('#toggle-slideshow').click(
-		      function() {
-		        galleriesArr[0].slideshow.toggle();
-		        return false;
-		      }
-		    );
-		    $('#toggle-description').click(
-		      function() {
-		        if(!galleriesArr[0].settings.description_wrapper) {
-		          galleriesArr[0].settings.description_wrapper = $('#descriptions');
-		        } else {
-		          galleriesArr[0].settings.description_wrapper = false;
-		        }
-		        return false;
-		      }
-		    );
- }   
-
- function modalFadeOut(){
-
-	      $('.ad-controls', this).empty();
-          $("body").removeClass('hidden');
-
- }
-   
- $(".modal").fadeOut(1);
-  $(".modal2").fadeOut(1);
-
- var docHeight = $(document).height();
-
-
 
     $(".trigger-overlay").click(function(){
         $(".toolbar").css("z-index" , "200");
@@ -698,27 +593,5 @@ function redrawDotNav(){
             
       
     });
-
-
-		 
-		 var fetchedResume;
-		/*$('#resumeHidden').load('resume.html #outerStuff', function() {
-		//alert("loaded");
-		});
-	
-			$('#contactHidden').load('contact.php', function() {
-			//alert('Load was performed.');
-		});
-		*/
-			 });
-			 
- 
-//})(jQuery); 
-			
-
-	
-		
-(function($) { 	
-		
   
-})(jQuery)
+})(jQuery);

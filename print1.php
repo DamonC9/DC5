@@ -1,38 +1,25 @@
 <section id="print">
  <div class="overlay overlay-scale overlay-print1">
-    <button type="button" class="overlay-close">Close</button>
+    <div class="overlay-close">
+      <span class="close-icon">Close</span>
+    </div>
     <div class="sky-tabs sky-tabs-pos-top-left sky-tabs-response-to-switcher">
       <input type="radio" name="sky-tabs-print1" checked id="sky-tab1e" class="sky-tab-content-1">
-      <label for="sky-tab1e"><span><span>Pie Five</span></span></label>
+      <label for="sky-tab1e"><span><span>Xtreme Power</span></span></label>
       
       <input type="radio" name="sky-tabs-print1" id="sky-tab2e" class="sky-tab-content-2">
-      <label for="sky-tab2e"><span><span>DART GoPass</span></span></label>
-      
+      <label for="sky-tab2e"><span><span>RRR</span></span></label>
 
+      <input type="radio" name="sky-tabs-print1" id="sky-tab3e" class="sky-tab-content-3">
+      <label for="sky-tab3e"><span><span>Browder Capital</span></span></label>
+      
       <label class="switcher"><span><span><a class="icon-list2" href="#"><span>Choose Project</span></a></span></span></label>
       
       <?php include 'views/gallery-print1.php'; ?>
       
     </div>
   </div>
-  <div class = "overlay overlay-scale overlay-print2">
-    <button type="button" class="overlay-close">Close</button>
-      <div class="sky-tabs sky-tabs-pos-top-left sky-tabs-response-to-switcher">
-        <input type="radio" name="sky-tabs-print2" checked id="sky-tab1f" class="sky-tab-content-1">
-        <label for="sky-tab1f"><span><span>Cheap Caribbean</span></span></label>
-        
-        <input type="radio" name="sky-tabs-print2" id="sky-tab2f" class="sky-tab-content-2">
-        <label for="sky-tab2f"><span><span>Shell FRN</span></span></label>
-
-        <input type="radio" name="sky-tabs-print2" id="sky-tab3f" class="sky-tab-content-3">
-        <label for="sky-tab3f"><span><span>Pavaso</span></span></label>
-
-        <label class="switcher"><span><span><a class="icon-list2" href="#"><span>Choose Project</span></a></span></span></label>
-        
-        <?php include 'views/gallery-print2.php'; ?>
-      
-    </div>
-  </div>
+ 
     <!-- modal-concept-2 -->
     <div id="ink">
       <div id="front-ink1"><img src="images/front-ink1.png" alt=""></div>
@@ -52,21 +39,13 @@
         </div>
         <!-- end .button-area -->
         <header>Print</header>
-        <p class="info-title">Logos, Paper Systems, Collateral</p>
+        <p class="info-title">Logos &#38; Collateral</p>
          <div class="inner-content" id="print-content">
           <div class="trigger-overlay overlay_text overlay_left_right" id="overlay-print1"> <img class="work-concepts"  src="images/box-thumb-collateral.jpg" alt="">
             <div class="overlay_text_mask black_mask">
-              <h2>Collateral</h2>
-              <p>Brochures, Banners, &#38; Business cards</p>
+              <h2 style="margin-top: 30px;">Logos &#38; Collateral</h2>
             </div>
           </div>
-          <div class="trigger-overlay overlay_text overlay_left_right" id="overlay-print2"> <img src="images/box-thumb-logos.jpg" alt="">
-            <div class="overlay_text_mask black_mask">
-              <h2>Logos</h2>
-              <p></p>
-            </div>
-          </div>
-       
         </div>
         <div class="clear"></div>
       </div>

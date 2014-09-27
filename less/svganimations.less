@@ -1,0 +1,92 @@
+svg {
+	pointer-events: none;
+}
+
+/* Demo 1 */
+
+.phone-sketch {width: 400px; height: 500px; top: 13%; left: 10%;}
+
+.wireframe-writing {position: absolute; left: 0px; top: 0px; width: 100%;
+
+	h4 {width: 100%; position: absolute; font-weight: normal;
+
+		&:nth-child(1) {left: 371px; top: 45px;}
+		&:nth-child(2) {left: 306px; top: 206px;}
+		&:nth-child(3) {left: -100px; top: 288px; width: 80px; text-align: right;}
+		&:nth-child(4) {left: 306px; top: 277px;}
+	}
+}
+
+.sketch-writing {position: absolute; left: 600px; top: 400px;
+
+	h3 {margin-bottom: .5em; font-size: 1.1em; font-weight: normal;}
+}
+
+
+
+.demo-drawings figcaption {
+	margin: 0 auto 0 auto;
+	max-width: 40em;
+	width: 95%;
+	text-align: center;
+}
+
+.demo-drawings figure:first-child figcaption {
+	margin-top: 8em;
+}
+
+.demo-drawings figcaption h2 {
+	font-weight: 300;
+	font-size: 3em;
+	margin-bottom: 0.2em;
+}
+
+.demo-drawings figcaption p {
+	font-size: 1.3em;
+}
+
+.phone-sketch {
+	position: absolute;
+	max-height: 600px;
+}
+
+.phone-sketch-image {
+	position: absolute;
+	max-height: 100%;
+	max-width: 100%;
+	opacity: 0;
+	/*-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);*/
+}
+
+.phone-lines {position: absolute;}
+
+
+.show {
+	opacity: 1;
+}
+
+.hide {
+	opacity: 0;
+}
+
+.phone-lines,
+.phone-sketch-image {
+	.transition(opacity .5s);
+	/*-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;*/
+}
+
+@media screen and (min-width: 1200px) {
+
+.phone-sketch {width: 428px; height: 550px; top: 13%; left: 10%;}
+
+.wireframe-writing h4 {
+
+		&:nth-child(1) {left: 410px; top: 50px;}
+		&:nth-child(2) {left: 335px; top: 227px;}
+		&:nth-child(3) {left: -100px; top: 318px; width: 80px; text-align: right;}
+		&:nth-child(4) {left: 335px; top: 306px;}
+	}
+
+}
